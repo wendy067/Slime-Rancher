@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Produtos - Slime Rancher Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">SlimeRancher Shop</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="produtos.html" class="nav-item active">Produtos</a></li>
+                <li><span id="contador-nav-carrinho" class="nav-sacola">Itens: 0</span></li>
+                <li><button id="btn-alternar-tema" class="theme-btn">Mudar para Tema Escuro</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <h2>Procure seu Slime Favorito</h2>
+            <input type="text" id="filtro-busca-livros" placeholder="Digite o nome do slime (ex: Tigre, Rosa, Caçador)...">
+            <p id="aviso-sem-resultados" class="no-results-msg" style="display: none;">Nenhum slime encontrado com este nome.</p>
+        </div>
+
+        <section class="features-grid grade-catalogo">
+            
+            <div class="card card-livro">
+                <h3>Pelúcia Slime Caçador</h3>
+                <div class="placeholder-img"><img src="raposinha.jpg" alt="Slime Caçador"></div>
+                <span class="preco">R$ 99,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime Caçador" data-preco="99.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime Poça</h3>
+                <div class="placeholder-img"><img src="aguw.jpg" alt="Slime Poça"></div>
+                <span class="preco">R$ 89,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime Poça" data-preco="89.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime Rosa</h3>
+                <div class="placeholder-img"><img src="rosa.jpg" alt="Slime Rosa"></div>
+                <span class="preco">R$ 79,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime Rosa" data-preco="79.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime de Mel</h3>
+                <div class="placeholder-img"><img src="mel.jpg" alt="Slime de Mel"></div>
+                <span class="preco">R$ 94,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime de Mel" data-preco="94.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime Fósforo</h3>
+                <div class="placeholder-img"><img src="vagalume.jpg" alt="Slime Fósforo"></div>
+                <span class="preco">R$ 89,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime Fósforo" data-preco="89.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime Tigre</h3>
+                <div class="placeholder-img"><img src="tigre.jpg" alt="Slime Tigre"></div>
+                <span class="preco">R$ 89,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime Tigre" data-preco="89.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime de Fogo</h3>
+                <div class="placeholder-img"><img src="lava.jpg" alt="Slime de Fogo"></div>
+                <span class="preco">R$ 94,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime de Fogo" data-preco="94.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime Glitch</h3>
+                <div class="placeholder-img"><img src="glith.jpg" alt="Slime Glitch"></div>
+                <span class="preco">R$ 99,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime Glitch" data-preco="99.90">Colocar no Cesto</button>
+            </div>
+
+            <div class="card card-livro">
+                <h3>Pelúcia Slime da Sorte</h3>
+                <div class="placeholder-img"><img src="sortudo.jpg" alt="Slime da Sorte"></div>
+                <span class="preco">R$ 109,90</span>
+                <button class="btn-adicionar-carrinho" data-nome="Pelúcia Slime da Sorte" data-preco="109.90">Colocar no Cesto</button>
+            </div>
+
+        </section>
+
+        <section class="carrinho-container">
+            <h2>Seu Cesto de Compras</h2>
+            <div class="carrinho-conteudo">
+                <ul id="lista-itens-carrinho" class="carrinho-lista">
+                    <li class="carrinho-vazio-texto">Seu cesto está vazio. Adicione itens do catálogo acima.</li>
+                </ul>
+                <div class="carrinho-resumo">
+                    <p>Total: <strong id="preco-total-carrinho">R$ 0,00</strong></p>
+                    <button id="btn-finalizar-compra" class="btn-finalizar" disabled>Finalizar Encomenda</button>
+                </div>
+                <div id="checkout-feedback" class="feedback-msg"></div>
+            </div>
+        </section>
+
+        <section class="task-manager-section task-container">
+            <h2>Sua Lista de Desejos</h2>
+            <form id="form-tarefa-biblioteca" class="task-form">
+                <input type="text" id="input-texto-tarefa" placeholder="Ex: Pelúcia Slime de Fogo..." required>
+                <button type="submit" class="task-btn">Adicionar à Lista</button>
+            </form>
+            <ul id="lista-de-tarefas" class="task-list"></ul>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Todos os direitos reservados &copy; 2026 - Slime Rancher Fan Shop</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

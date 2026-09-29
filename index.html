@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancho Oficial - Slime Rancher Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">SlimeRancher Shop</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-item active">Home</a></li>
+                <li><a href="produtos.html" class="nav-item">Produtos</a></li>
+                <li><button id="btn-alternar-tema" class="theme-btn">Modo Escuro</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao-hero hero">
+            <h1>Bem-vindo ao Rancho de Pelúcias</h1>
+            <p>Encontre os slimes do Far, Far Range em formato de pelúcias e chaveiros colecionáveis.</p>
+            <button class="cta-button cta-cadastrar-livro">Fazer Login no Rancho (Ganhe 15% OFF)</button>
+
+            <div class="placeholder-img">
+                <img src="slime.jpg" alt="Slime Tigre">
+            </div>
+        </section>
+
+        <section class="hero" style="margin-top: 0px; text-align: left; align-items: flex-start; gap: 10px;">
+            <h2>Sobre a SlimeRancher Shop</h2>
+            <p>Se você passou horas explorando os recifes e cavernas do planeta Far, Far Range coletando plorts e
+                alimentando criaturinhas saltitantes, este é o lugar certo. Nossa loja traz os elementos do jogo direto
+                para o mundo real.</p>
+            <p>Transformamos os slimes mais icônicos em pelúcias macias e chaveiros colecionáveis de alta qualidade.
+                Todos os nossos produtos são produzidos com materiais premium, ideais para colecionadores e entusiastas
+                do jogo.</p>
+            <h3>Como funciona a plataforma</h3>
+            <p>Navegue pelas seções disponíveis para aproveitar os recursos:</p>
+            <ul style="margin-left: 20px; line-height: 1.6; color: inherit;">
+                <li><strong>Aba de Produtos:</strong> Acesse o catálogo completo para buscar itens e adicioná-los ao
+                    cesto de compras.</li>
+                <li><strong>Lista de Desejos:</strong> Salve os slimes que você pretende adquirir em suas próximas
+                    visitas utilizando o gerenciador local.</li>
+                <li><strong>Plort-Market:</strong> Consulte o simulador econômico para receber dicas baseadas no mercado
+                    do jogo.</li>
+            </ul>
+        </section>
+        <section class="ai-container">
+            <h2>Dica do Plort-Market</h2>
+            <p>Consulte o sistema de análise para verificar as tendências atuais do mercado de slimes.</p>
+            <button id="btn-generar-ia" class="ai-btn">Gerar Nova Recomendação</button>
+            <div id="resultado-ia-box" class="ai-result-box" style="display: none;">
+                <p id="texto-saida-ia"></p>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-cadastro" class="modal-overlay">
+        <div class="modal-content">
+            <span id="fechar-modal" class="modal-close">&times;</span>
+            <h3>Entrar no Rancho Central</h3>
+            <p>Faça login para salvar suas preferências e liberar 15% de desconto automático no cesto de compras.</p>
+            <form id="form-cadastro-livro">
+                <input type="email" id="input-titulo" placeholder="Digite seu e-mail de usuário" required>
+                <button type="submit" class="cta-button" style="width: 100%;">Confirmar Login</button>
+            </form>
+            <div id="feedback-modal" class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <p>Todos os direitos reservados &copy; 2026 - Slime Rancher Fan Shop</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
